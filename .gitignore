@@ -3,6 +3,15 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+venv/
+*.pyc
+__pycache__/
+db.sqlite3
+.env
+*.log
+/staticfiles/
+
+
 # C extensions
 *.so
 
