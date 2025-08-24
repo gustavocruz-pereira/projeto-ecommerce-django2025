@@ -17,6 +17,7 @@ class Produto(models.Model):
     estoque = models.PositiveIntegerField()
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     disponivel = models.BooleanField(default=True)    
-
+    imagem = models.ImageField(upload_to='produtos', blank=True, null=True)
+    
     def __str__(self):
         return self.nome
