@@ -3,10 +3,19 @@
 <div class="container py-5 d-flex justify-content-center">
     <figure class="card card-product-grid card-lg shadow-lg p-4" style="max-width: 800px; width: 100%;">
         <!-- Imagem do produto -->
+        {% if produto.imagem %}
         <div class="text-center mb-4">
             <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}" class="img-fluid rounded"
                 style="max-height: 400px; object-fit: contain;">
         </div>
+        {% else %}
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Sem imagem</text>
+        </svg>
+        {% endif %}
 
         <!-- Informações -->
         <figcaption class="info-wrap">
