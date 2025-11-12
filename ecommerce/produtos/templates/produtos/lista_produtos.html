@@ -24,10 +24,12 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ produto.nome }}</h5>
                     <p class="card-text">Preço: R$ {{ produto.preco }}</p>
+                    <p>Em estoque: {{produto.estoque}}</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
+                            <a href="{% url 'detalhe_produto' produto.id %}" class="btn btn-success btn-lg" h>COMPRAR
+                                🛒</a>
+                            <!--<button type="button" class="btn btn-sm btn-outline-secondary"></button>-->
                         </div>
                     </div>
                 </div>
