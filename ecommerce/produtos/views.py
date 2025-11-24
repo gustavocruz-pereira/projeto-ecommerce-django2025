@@ -13,3 +13,4 @@ def pagina_inicial(request):
     produtos = Produto.objects.filter(disponivel=True)
     return render(request, 'produtos/inicio.html', {'produtos': produtos})
 
+
